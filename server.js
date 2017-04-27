@@ -40,7 +40,16 @@ app.get('/bookings/:id', function (req, res) {
 
 app.put('/bookings/:id', function (req, res) {
 	var id = req.params.id;
-	console.log(id);
+	console.log(req.body.userName);
+	db.bookings.findAndModify({
+    query: {_id: mongojs.ObjectId(id)},
+    update: {$set: {userID: req.body.userID, userName: req.body.userName, cityFrom: req.body.cityFrom, 
+    	cityTo: req.body.cityTo, date: req.body.date, time: req.body.time, 
+    	class: req.body.class, planeNumber: req.body.planeNumber, seatNumber: req.body.seatNumber, price: req.body.price}},
+    new: true}, function (err, doc) {
+      res.json(doc);
+    }
+  );
 });
 
 app.listen(3000);

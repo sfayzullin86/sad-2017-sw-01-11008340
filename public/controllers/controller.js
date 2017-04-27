@@ -34,7 +34,9 @@ function AppCtrl($scope, $http) {
 
   $scope.updateBooking = function() {
 		console.log($scope.booking._id);
-		$http.put('/bookings/' + $scope.booking._id, $scope.booking)
+		$http.put('/bookings/' + $scope.booking._id, $scope.booking).success(function(response) {
+			refresh();
+		});
   };
 
 }
