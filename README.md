@@ -8,4 +8,4 @@ Express
 AngularJs
 NodeJs
 
-POST functionality described on repos Wiki page.
+CRUD functionality described on repos Wiki page.
