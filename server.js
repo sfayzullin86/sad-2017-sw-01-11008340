@@ -25,6 +25,9 @@ app.post('/bookings', function (req, res) {
 app.delete('/bookings/:id', function (req, res) {
 	var id = req.params.id;
 	console.log(id);
+	db.bookings.remove({_id: mongojs.ObjectId(id)}, function(err, doc) {
+		res.json(doc);
+	});
 });
 
 app.listen(3000);
