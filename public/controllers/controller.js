@@ -24,4 +24,12 @@ function AppCtrl($scope, $http) {
 			refresh();
 		});
   };
+
+  $scope.editBooking = function(id) {
+		console.log(id);
+		$http.get('/bookings/' + id).success(function(response) {
+			$scope.booking = response;
+		});
+  };
+
 }
