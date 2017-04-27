@@ -22,5 +22,10 @@ app.post('/bookings', function (req, res) {
 	});
 });
 
+app.delete('/bookings/:id', function (req, res) {
+	var id = req.params.id;
+	console.log(id);
+});
+
 app.listen(3000);
 console.log("Server running on port 3000");

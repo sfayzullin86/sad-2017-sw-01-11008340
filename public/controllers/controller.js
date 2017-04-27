@@ -20,5 +20,6 @@ function AppCtrl($scope, $http) {
 
   $scope.removeBooking = function(id) {
 		console.log(id);
+		$http.delete('/bookings/' + id)
   };
 }
