@@ -25,9 +25,23 @@
 					<th>Plane Number</th>
 					<th>Seat Number</th>
 					<th>Price, EUR</th>
+					<th>Action</th
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+				<td><input class="form-control" ng-model='booking.userID'></td>
+				<td><input class="form-control" ng-model='booking.userName'></td>
+				<td><input class="form-control" ng-model='booking.cityFrom'></td>
+				<td><input class="form-control" ng-model='booking.cityTo'></td>
+				<td><input class="form-control" ng-model='booking.date'></td>
+				<td><input class="form-control" ng-model='booking.time'></td>
+				<td><input class="form-control" ng-model='booking.class'></td>
+				<td><input class="form-control" ng-model='booking.planeNumber'></td>
+				<td><input class="form-control" ng-model='booking.seatNumber'></td>
+				<td><input class="form-control" ng-model='booking.price'></td>
+				<td><button class="btn btn-primary" ng-click='addBooking()'>Add Booking</button></td>
+				</tr>
 				<tr ng-repeat="booking in bookings">
 				<td>{{booking.userID}}</td>
 				<td>{{booking.userName}}</td>
