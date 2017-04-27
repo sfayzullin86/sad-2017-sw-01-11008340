@@ -6,6 +6,8 @@ function AppCtrl($scope, $http) {
 	});
 	$scope.addBooking = function() {
 		console.log($scope.booking);
-		$http.post('/bookings', $scope.booking);
-	};
+		$http.post('/bookings', $scope.booking).success(function(response) {
+    	console.log(response);
+    	});
+  };
 }

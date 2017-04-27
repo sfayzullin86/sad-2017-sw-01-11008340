@@ -17,6 +17,9 @@ app.get('/bookings', function (req, res) {
 
 app.post('/bookings', function (req, res) {
 	console.log(req.body);
+	db.bookings.insert(req.body, function(err, doc) {
+		res.json(doc);
+	});
 });
 
 app.listen(3000);
