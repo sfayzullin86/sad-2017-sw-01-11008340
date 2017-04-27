@@ -17,4 +17,8 @@ function AppCtrl($scope, $http) {
     	refresh();
     	});
   };
+
+  $scope.removeBooking = function(id) {
+		console.log(id);
+  };
 }
