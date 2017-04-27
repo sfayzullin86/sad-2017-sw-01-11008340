@@ -39,4 +39,8 @@ function AppCtrl($scope, $http) {
 		});
   };
 
+  $scope.deselect = function() {
+  $scope.booking = "";
+}
+
 }
