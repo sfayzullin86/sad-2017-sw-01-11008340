@@ -1,0 +1,4 @@
+use bookings
+db.bookings.insert({userID: '00001', userName: 'John Smith', cityFrom: 'Frankfurt', cityTo: 'Barselona', date: '01.01.2017', time: '09:00', class: '1', planeNumber: 'K123', seatNumber: 'A1', price: '200'})
+db.bookings.insert({userID: '00002', userName: 'Andrey Ivanov', cityFrom: 'Moscow', cityTo: 'Kiev', date: '09.01.2017', time: '15:00', class: '2', planeNumber: 'JH123', seatNumber: 'C23', price: '150'})
+db.bookings.insert({userID: '00003', userName: 'Timur Bekmambetov', cityFrom: 'Moscow', cityTo: 'Washington', date: '20.01.2017', time: '10:00', class: '1', planeNumber: 'L123', seatNumber: 'A5', price: '450'})
