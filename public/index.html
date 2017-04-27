@@ -25,7 +25,8 @@
 					<th>Plane Number</th>
 					<th>Seat Number</th>
 					<th>Price, EUR</th>
-					<th>Action</th
+					<th>Action</th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -41,6 +42,7 @@
 				<td><input class="form-control" ng-model='booking.seatNumber'></td>
 				<td><input class="form-control" ng-model='booking.price'></td>
 				<td><button class="btn btn-primary" ng-click='addBooking()'>Add Booking</button></td>
+				<td><button class="btn btn-info" ng-click='updateBooking()'>Update Booking</button></td>
 				</tr>
 				<tr ng-repeat="booking in bookings">
 				<td>{{booking.userID}}</td>
