@@ -38,5 +38,10 @@ app.get('/bookings/:id', function (req, res) {
 	});
 });
 
+app.put('/bookings/:id', function (req, res) {
+	var id = req.params.id;
+	console.log(id);
+});
+
 app.listen(3000);
 console.log("Server running on port 3000");
