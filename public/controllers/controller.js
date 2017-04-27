@@ -1,5 +1,6 @@
-function AppCtrl($scope) {
+function AppCtrl($scope, $http) {
 	console.log("Hello world from controller");
+	$http.get('/bookings')
 	booking1 = {
 		userID: '00001',
 		userName: 'John Smith',
